@@ -1,20 +1,14 @@
 const ThingsICanDo = () => {
   return (
     <>
-      <div class="container">
+      <div className="container">
         <h3>Things I Can Do</h3>
-        <p>
-          Integer eu ante ornare amet commetus vestibulum blandit integer in
-          curae ac faucibus integer non. Adipiscing cubilia elementum integer
-          lorem ipsum dolor sit amet.
-        </p>
-        <ul class="feature-icons">
-          <li class="icon solid fa-code">Write all the code</li>
-          <li class="icon solid fa-cubes">Stack small boxes</li>
-          <li class="icon solid fa-book">Read books and stuff</li>
-          <li class="icon solid fa-coffee">Drink much coffee</li>
-          <li class="icon solid fa-bolt">Lightning bolt</li>
-          <li class="icon solid fa-users">Shadow clone technique</li>
+        <p>Some relevant skills I have acquired over the years</p>
+        <ul className="feature-icons">
+          <li className="icon solid fa-code"><strong>Develop Web Apps</strong><br />ReactJS, NodeJS, HTML, CSS, JS</li>
+          <li className="icon solid fa-cogs"><strong>Build Test Automation Suites</strong><br />Robot Framework, Selenium, Python</li>
+          <li className="icon solid fa-mobile-alt"><strong>Build Mobile Apps</strong><br />Android Studio (Java), Ionic, PWA</li>
+          <li className="icon solid fa-robot"><strong>Analyse Data and Build ML Models</strong><br />Pandas, NumPy, Matplotlib, Tensorflow</li>
         </ul>
       </div>
     </>

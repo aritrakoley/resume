@@ -1,19 +1,15 @@
 const Accomplishments = () => {
   return (
     <>
-      <div class="container">
+      <div className="container">
         <h3>A Few Accomplishments</h3>
-        <p>
-          Integer eu ante ornare amet commetus vestibulum blandit integer in
-          curae ac faucibus integer non. Adipiscing cubilia elementum integer.
-          Integer eu ante ornare amet commetus.
-        </p>
-        <div class="features">
+        <p></p>
+        <div className="features">
           <article>
-            <a href="#" class="image">
+            <a href="#" className="image">
               <img src="images/pic01.jpg" alt="" />
             </a>
-            <div class="inner">
+            <div className="inner">
               <h4>Possibly broke spacetime</h4>
               <p>
                 Integer eu ante ornare amet commetus vestibulum blandit integer
@@ -22,10 +18,10 @@ const Accomplishments = () => {
             </div>
           </article>
           <article>
-            <a href="#" class="image">
+            <a href="#" className="image">
               <img src="images/pic02.jpg" alt="" />
             </a>
-            <div class="inner">
+            <div className="inner">
               <h4>Terraformed a small moon</h4>
               <p>
                 Integer eu ante ornare amet commetus vestibulum blandit integer
@@ -34,10 +30,10 @@ const Accomplishments = () => {
             </div>
           </article>
           <article>
-            <a href="#" class="image">
+            <a href="#" className="image">
               <img src="images/pic03.jpg" alt="" />
             </a>
-            <div class="inner">
+            <div className="inner">
               <h4>Snapped dark matter in the wild</h4>
               <p>
                 Integer eu ante ornare amet commetus vestibulum blandit integer

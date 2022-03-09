@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import About from "./components/About/About";
+import WhoAmI from "./components/WhoAmI/WhoAmI";
+import Experience from "./components/Experience/Experience";
 import Accomplishments from "./components/Accomplishments/Accomplishments";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -13,6 +14,7 @@ function App() {
   const refTwo = useRef(null);
   const refThree = useRef(null);
   const refFour = useRef(null);
+  const refFive = useRef(null);
 
   useEffect(() => {
     const sections = [
@@ -20,6 +22,7 @@ function App() {
       { sid: "two", ref: refTwo },
       { sid: "three", ref: refThree },
       { sid: "four", ref: refFour },
+      { sid: "five", ref: refFive },
     ];
     
     const handleScroll = () => {
@@ -33,7 +36,7 @@ function App() {
 
       const getCurrentSection = () => {
         return sections.find((e) => {
-          const cursor = window.scrollY + 80;
+          const cursor = window.scrollY + 40;
           const bounds = getVerticalBounds(e.ref.current);
           return cursor >= bounds.top && cursor <= bounds.bottom;
         });
@@ -57,15 +60,18 @@ function App() {
       <div id="wrapper">
         <div id="main">
           <section id="one" ref={refOne}>
-            <About />
+            <WhoAmI />
           </section>
           <section id="two" ref={refTwo}>
-            <ThingsICanDo />
+            <Experience />
           </section>
           <section id="three" ref={refThree}>
-            <Accomplishments />
+            <ThingsICanDo />
           </section>
           <section id="four" ref={refFour}>
+            <Accomplishments />
+          </section>
+          <section id="five" ref={refFive}>
             <Contact />
           </section>
         </div>
