@@ -24,7 +24,7 @@ const Header = ({activeSection}) => {
             <a href="#two" className={ activeSection === "three" ? "active" : null } >Things I Can Do</a>
           </li>
           <li>
-            <a href="#three" className={ activeSection === "four" ? "active" : null }>A Few Accomplishments</a>
+            <a href="#three" className={ activeSection === "four" ? "active" : null }>Projects</a>
           </li>
           <li>
             <a href="#four" className={ activeSection === "five" ? "active" : null }>Contact</a>

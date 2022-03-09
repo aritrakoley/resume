@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import WhoAmI from "./components/WhoAmI/WhoAmI";
 import Experience from "./components/Experience/Experience";
-import Accomplishments from "./components/Accomplishments/Accomplishments";
+import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -69,7 +69,7 @@ function App() {
             <ThingsICanDo />
           </section>
           <section id="four" ref={refFour}>
-            <Accomplishments />
+            <Projects />
           </section>
           <section id="five" ref={refFive}>
             <Contact />

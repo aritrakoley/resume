@@ -3,11 +3,7 @@ const Contact = () => {
     <>
       <div className="container">
         <h3>Contact Me</h3>
-        <p>
-          Integer eu ante ornare amet commetus vestibulum blandit integer in
-          curae ac faucibus integer non. Adipiscing cubilia elementum integer.
-          Integer eu ante ornare amet commetus.
-        </p>
+        <p>If you have any questions or think that I'm a good fit for a role contact me</p>
         <form method="post" action="#">
           <div className="row gtr-uniform">
             <div className="col-6 col-12-xsmall">
