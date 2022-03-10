@@ -3,10 +3,7 @@ const Footer = () => {
     <>
       <div class="container">
         <ul class="copyright">
-          <li>&copy; Untitled. All rights reserved.</li>
-          <li>
-            Design: <a href="http://html5up.net">HTML5 UP</a>
-          </li>
+          <li>&copy; Aritra Koley. All rights reserved.</li>
         </ul>
       </div>
     </>
