@@ -6,8 +6,8 @@ const Projects = () => {
         <p>Things I've worked on</p>
         <div className="features">
           <article>
-            <a href="#" className="image">
-              <img src="images/pic01.jpg" alt="" />
+            <a href="https://github.com/aritrakoley/MSc_Prototypes" className="image">
+              <img src="images/pic01.jpg" alt="" style={{width: 'fit-content'}}/>
             </a>
             <div className="inner">
               <h4>
@@ -21,6 +21,7 @@ const Projects = () => {
                   <a
                     href="https://github.com/aritrakoley/MSc_Prototypes"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     https://github.com/aritrakoley/MSc_Prototypes
                   </a>
@@ -29,18 +30,19 @@ const Projects = () => {
             </div>
           </article>
           <article>
-            <a href="#" className="image">
+            <a href="https://github.com/aritrakoley/neighbourhood_similarity_analysis" className="image">
               <img src="images/pic02.jpg" alt="" />
             </a>
             <div className="inner">
-              <h4>Similarity Analysis of Neighbourhoods in DifferentCities</h4>
+              <h4>Similarity Analysis of Neighbourhoods in Different Cities</h4>
               <p>
                 <em>2019</em>
                 <br />
                 <em>
                   <a
-                    href="https://github.com/aritrakoley/neighbourhood_similarity_analysisPrecomputing"
+                    href="https://github.com/aritrakoley/neighbourhood_similarity_analysis"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     https://github.com/aritrakoley/neighbourhood_similarity_analysis
                   </a>
@@ -49,7 +51,7 @@ const Projects = () => {
             </div>
           </article>
           <article>
-            <a href="#" className="image">
+            <a href="http://dx.doi.org/10.26438/ijcse/v6i1.2430" className="image">
               <img src="images/pic03.jpg" alt="" />
             </a>
             <div className="inner">
@@ -64,6 +66,7 @@ const Projects = () => {
                   <a
                     href="http://dx.doi.org/10.26438/ijcse/v6i1.2430"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     http://dx.doi.org/10.26438/ijcse/v6i1.2430
                   </a>

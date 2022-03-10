@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import WhoAmI from "./components/WhoAmI/WhoAmI";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import ThingsICanDo from "./components/ThingsICanDo/ThingsICanDo";
@@ -14,15 +13,13 @@ function App() {
   const refTwo = useRef(null);
   const refThree = useRef(null);
   const refFour = useRef(null);
-  const refFive = useRef(null);
 
   useEffect(() => {
     const sections = [
       { sid: "one", ref: refOne },
       { sid: "two", ref: refTwo },
       { sid: "three", ref: refThree },
-      { sid: "four", ref: refFour },
-      { sid: "five", ref: refFive },
+      { sid: "four", ref: refFour }
     ];
     
     const handleScroll = () => {
@@ -70,9 +67,6 @@ function App() {
           </section>
           <section id="four" ref={refFour}>
             <Projects />
-          </section>
-          <section id="five" ref={refFive}>
-            <Contact />
           </section>
         </div>
       </div>
