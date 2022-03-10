@@ -7,7 +7,7 @@ const Projects = () => {
         <div className="features">
           <article>
             <a href="https://github.com/aritrakoley/MSc_Prototypes" className="image">
-              <img src="images/pic01.jpg" alt="" style={{width: 'fit-content'}}/>
+              <img src="images/pic01.jpg" alt="" />
             </a>
             <div className="inner">
               <h4>
