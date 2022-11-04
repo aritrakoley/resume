@@ -19,7 +19,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'build'
+          source-directory: 'dist'
           destination-github-username: 'aritrakoley'
           destination-repository-name: 'aritrakoley.github.io'
           user-email: koley.aritra824@gmail.com
