@@ -13,7 +13,7 @@ jobs:
           node-version: '16.18.0'
       - run: npm install
       - run: npm run build
-      - run: ls -l build
+      - run: ls -l dist
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
