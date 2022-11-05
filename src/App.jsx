@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ThingsICanDo from "./components/ThingsICanDo";
+import { content } from "./data/content";
 
 function App() {
   const [activeSection, setActiveSection] = useState("one");
@@ -19,11 +20,10 @@ function App() {
       { sid: "one", ref: refOne },
       { sid: "two", ref: refTwo },
       { sid: "three", ref: refThree },
-      { sid: "four", ref: refFour }
+      { sid: "four", ref: refFour },
     ];
-    
-    const handleScroll = () => {
 
+    const handleScroll = () => {
       const getVerticalBounds = (elm) => {
         return {
           top: elm.offsetTop,
@@ -50,13 +50,18 @@ function App() {
   }, [activeSection]);
 
   return (
-    <div className="is-preload">
+    <div>
       <section id="header">
         <Header activeSection={activeSection} />
       </section>
       <div id="wrapper">
         <div id="main">
-          <section id="one" ref={refOne}>
+          <section id="zero">
+            <div className="image main" data-position="center">
+              <img src={content.bannerImgUrl} alt="" />
+            </div>
+          </section>
+          <section id="one" ref={refOne} className="mx-40">
             <WhoAmI />
           </section>
           <section id="two" ref={refTwo}>
