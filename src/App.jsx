@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import WhoAmI from "./components/WhoAmI/WhoAmI";
-import Experience from "./components/Experience/Experience";
-import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import ThingsICanDo from "./components/ThingsICanDo/ThingsICanDo";
+import WhoAmI from "./components/WhoAmI";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ThingsICanDo from "./components/ThingsICanDo";
 
 function App() {
   const [activeSection, setActiveSection] = useState("one");
