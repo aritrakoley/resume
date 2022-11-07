@@ -50,34 +50,48 @@ function App() {
   }, [activeSection]);
 
   return (
-    <div>
-      <section id="header">
+    <div className="w-[100%] h-[100vh] flex bg-gray-900 border border-blue-600">
+
+      <section
+        id="header"
+        className="h-full border border-green-600 flex flex-col min-w-[28rem] "
+      >
         <Header activeSection={activeSection} />
       </section>
-      <div id="wrapper">
-        <div id="main">
-          <section id="zero">
-            <div className="image main" data-position="center">
-              <img src={content.bannerImgUrl} alt="" />
-            </div>
-          </section>
-          <section id="one" ref={refOne} className="mx-40">
-            <WhoAmI />
-          </section>
-          <section id="two" ref={refTwo}>
-            <Experience />
-          </section>
-          <section id="three" ref={refThree}>
-            <ThingsICanDo />
-          </section>
-          <section id="four" ref={refFour}>
-            <Projects />
-          </section>
-        </div>
-      </div>
-      <section id="footer">
-        <Footer />
+
+      <section
+        id="main"
+        className="h-full grow flex flex-col border border-red-600 overflow-auto"
+      >
+
+        {/* <section id="zero">
+          <div className="h-[30%] w-[100%] overflow-hidden">
+            <img src={content.bannerImgUrl} alt="" className="h-full w-full" />
+          </div>
+        </section> */}
+
+        <section id="one" ref={refOne} className="mx-40">
+          <WhoAmI />
+        </section>
+
+        <section id="two" ref={refTwo}>
+          <Experience />
+        </section>
+
+        <section id="three" ref={refThree}>
+          <ThingsICanDo />
+        </section>
+
+        <section id="four" ref={refFour}>
+          <Projects />
+        </section>
+
+        <section id="footer" className="border border-blue-600">
+          <Footer />
+        </section>
+
       </section>
+
     </div>
   );
 }
