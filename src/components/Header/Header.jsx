@@ -1,29 +1,31 @@
 import { content } from "../../data/content";
 import ContactStub from "./ContactStub";
+import { HiPhone } from "react-icons/hi";
+import { SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
 
 const Header = ({ activeSection }) => {
   const { name, designation, phone, email, github, linkedin } = content.contact;
   const contactStubs = [
     {
-      icon: "",
+      icon: <HiPhone className="mx-1"/>,
       title: "Phone",
       data: phone,
       url: "/",
     },
     {
-      icon: "",
+      icon: <SiGmail className="mx-1" />,
       title: "Email",
       data: email,
       url: "mailto:koley.aritra824@gmail.com",
     },
     {
-      icon: "",
+      icon: <SiGithub className="mx-1" />,
       title: "GitHub",
       data: github,
       url: github,
     },
     {
-      icon: "",
+      icon: <SiLinkedin className="mx-1" />,
       title: "LinkedIn",
       data: linkedin,
       url: linkedin,
@@ -31,22 +33,34 @@ const Header = ({ activeSection }) => {
   ];
   return (
     <>
-      <header className="w-full h-[40%] flex flex-col items-center justify-start p-2 bg-gray-800 text-slate-200">
-        <span className="">
+      <header className="w-full min-h-fit m-2 py-2 flex flex-col items-center justify-between rounded-lg bg-slate-800 text-slate-200">
+        <div className="flex m-1 justify-center items-center w-[9rem] h-[9rem] bg-slate-700 rounded-full shadow-sm shadow-slate-400">
           <img
             src="images/avatar.jpg"
             alt=""
             className="w-[8rem] h-[8rem] rounded-full"
           />
-        </span>
-        <div id="name">{name}</div>
-        <div id="designation">{designation}</div>
-        <div className="w-full h-full grid grid-cols-2 grid-flow-row">
+          {/* <div className="min-w-[9rem] min-h-[9rem] absolute top-[-0.5rem] left-[-0.5rem] blur-md  rounded-full bg-gradient-to-r from-gray-200 to-purple-500 z-1"></div> */}
+        </div>
+        <div
+          id="name"
+          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400"
+        >
+          {name}
+        </div>
+        <div
+          id="designation"
+          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400"
+        >
+          {designation}
+        </div>
+        <div className="mt-2 grid grid-cols-2 grid-flow-row">
           {contactStubs.map((e) => (
             <ContactStub key={e.title} {...e} />
           ))}
         </div>
       </header>
+
       <nav
         id="nav"
         className="w-full grow flex flex-col bg-gray-700 text-white"

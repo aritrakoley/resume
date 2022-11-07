@@ -1,18 +1,8 @@
-import React from "react";
-
-const ContactStub = ({icon, title, data, url}) => {
+const ContactStub = ({ icon, title, data, url }) => {
   return (
-    <div className="flex rounded-lg m-1 border border-gray-200">
-      <a
-        href={url}
-        className={icon}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <span className="label">{title}</span>
-        <br />
-        <em>{data}</em>
-      </a>
+    <div className="flex items-center rounded-lg m-1 bg-slate-700 p-1 shadow-sm shadow-slate-400">
+      {icon}
+      <em className="text-sm mx-1">{data}</em>
     </div>
   );
 };

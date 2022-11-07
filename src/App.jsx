@@ -50,18 +50,18 @@ function App() {
   }, [activeSection]);
 
   return (
-    <div className="w-[100%] h-[100vh] flex bg-gray-900 border border-blue-600">
+    <div className="w-[100%] h-[100vh] flex bg-gray-900">
 
       <section
         id="header"
-        className="h-full border border-green-600 flex flex-col min-w-[28rem] "
+        className="h-full px-2 flex flex-col justify-evenly items-center min-w-fit border border-red-500"
       >
         <Header activeSection={activeSection} />
       </section>
 
       <section
         id="main"
-        className="h-full grow flex flex-col border border-red-600 overflow-auto"
+        className="h-full grow flex flex-col overflow-auto"
       >
 
         {/* <section id="zero">
