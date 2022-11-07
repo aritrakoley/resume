@@ -54,7 +54,7 @@ function App() {
 
       <section
         id="header"
-        className="h-full px-2 flex flex-col justify-evenly items-center min-w-fit border border-red-500"
+        className="h-full px-2 flex flex-col justify-start items-center min-w-fit"
       >
         <Header activeSection={activeSection} />
       </section>

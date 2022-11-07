@@ -2,12 +2,13 @@ import { content } from "../../data/content";
 import ContactStub from "./ContactStub";
 import { HiPhone } from "react-icons/hi";
 import { SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
+import NavItem from "./NavItem";
 
 const Header = ({ activeSection }) => {
   const { name, designation, phone, email, github, linkedin } = content.contact;
   const contactStubs = [
     {
-      icon: <HiPhone className="mx-1"/>,
+      icon: <HiPhone className="mx-1" />,
       title: "Phone",
       data: phone,
       url: "/",
@@ -31,10 +32,28 @@ const Header = ({ activeSection }) => {
       url: linkedin,
     },
   ];
+  const navItems = [
+    {
+      id: "one",
+      title: "Who Am I?",
+    },
+    {
+      id: "two",
+      title: "Experience",
+    },
+    {
+      id: "three",
+      title: "Things I Can Do",
+    },
+    {
+      id: "four",
+      title: "Projects",
+    },
+  ];
   return (
     <>
-      <header className="w-full min-h-fit m-2 py-2 flex flex-col items-center justify-between rounded-lg bg-slate-800 text-slate-200">
-        <div className="flex m-1 justify-center items-center w-[9rem] h-[9rem] bg-slate-700 rounded-full shadow-sm shadow-slate-400">
+      <header className="w-full min-h-fit m-2 p-2 flex flex-col items-center justify-between rounded-2xl bg-slate-800 text-slate-200">
+        <div className="flex m-1 justify-center items-center w-[9rem] h-[9rem] bg-slate-700 rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 ">
           <img
             src="images/avatar.jpg"
             alt=""
@@ -44,17 +63,17 @@ const Header = ({ activeSection }) => {
         </div>
         <div
           id="name"
-          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400"
+          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 "
         >
           {name}
         </div>
         <div
           id="designation"
-          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400"
+          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400 hover:shadow-md   hover:shadow-slate-400"
         >
           {designation}
         </div>
-        <div className="mt-2 grid grid-cols-2 grid-flow-row">
+        <div className="mt-2 grid grid-cols-1 grid-flow-row">
           {contactStubs.map((e) => (
             <ContactStub key={e.title} {...e} />
           ))}
@@ -63,41 +82,12 @@ const Header = ({ activeSection }) => {
 
       <nav
         id="nav"
-        className="w-full grow flex flex-col bg-gray-700 text-white"
+        className="w-full min-h-fit mt-1 mx-2 mb-2 p-2 grow flex flex-col items-center justify-between rounded-2xl text-slate-200"
       >
-        <ul>
-          <li>
-            <a
-              href="#one"
-              className={activeSection === "one" ? "active" : null}
-            >
-              Who Am I ?
-            </a>
-          </li>
-          <li>
-            <a
-              href="#two"
-              className={activeSection === "two" ? "active" : null}
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#three"
-              className={activeSection === "three" ? "active" : null}
-            >
-              Things I Can Do
-            </a>
-          </li>
-          <li>
-            <a
-              href="#four"
-              className={activeSection === "four" ? "active" : null}
-            >
-              Projects
-            </a>
-          </li>
+        <ul className="w-full mt-2 flex flex-col items-center">
+          {navItems.map((e) => (
+            <NavItem key={e.id} activeSection={activeSection} {...e} />
+          ))}
         </ul>
       </nav>
     </>
