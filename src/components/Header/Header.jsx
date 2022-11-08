@@ -53,23 +53,23 @@ const Header = ({ activeSection }) => {
   return (
     <>
       <header className="w-full min-h-fit m-2 p-2 flex flex-col items-center justify-between rounded-2xl bg-slate-800 text-slate-200">
-        <div className="flex m-1 justify-center items-center w-[9rem] h-[9rem] bg-slate-700 rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 ">
+        <div className="flex m-1 justify-center items-center w-[10rem] h-[10rem] bg-slate-700 rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 hover:">
           <img
             src="images/avatar.jpg"
             alt=""
-            className="w-[8rem] h-[8rem] rounded-full"
+            className="w-[9rem] h-[9rem] rounded-full"
           />
           {/* <div className="min-w-[9rem] min-h-[9rem] absolute top-[-0.5rem] left-[-0.5rem] blur-md  rounded-full bg-gradient-to-r from-gray-200 to-purple-500 z-1"></div> */}
         </div>
         <div
           id="name"
-          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 "
+          className="mt-2 bg-slate-700 px-4 text-xl font-semibold rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 "
         >
           {name}
         </div>
         <div
           id="designation"
-          className="mt-2 bg-slate-700 px-4 rounded-full shadow-sm shadow-slate-400 hover:shadow-md   hover:shadow-slate-400"
+          className="mt-2 bg-slate-700 px-4 text-xl rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400"
         >
           {designation}
         </div>

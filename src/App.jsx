@@ -70,7 +70,7 @@ function App() {
           </div>
         </section> */}
 
-        <section id="one" ref={refOne} className="mx-40">
+        <section id="one" ref={refOne}>
           <WhoAmI />
         </section>
 
