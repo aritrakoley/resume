@@ -61,10 +61,10 @@ export const content = {
     title: "Things I Can Do",
     subtitle: "Some relevant skills I have acquired over the years",
     data: [
-      "code|Develop Web Apps|ReactJS, Tailwind, Storybook, Firebase, NodeJS, HTML, CSS, JS, SQL",
-      "cogs|Build Test Automation Suites|Robot Framework, Selenium, Python",
-      "mobile|Build Mobile Apps|Android Studio (Java), Ionic, PWA",
-      "robot|Analyse Data and Build ML Models|Pandas, NumPy, OpenCV, Matplotlib, Tensorflow",
+      "code|Develop Web Apps|ReactJS,Tailwind,Storybook,Firebase,NodeJS,HTML,CSS,JS,SQL",
+      "cogs|Build Test Automation Suites|Robot Framework,Selenium,Python",
+      "mobile|Build Mobile Apps|Android Studio,Java,Ionic,PWA",
+      "robot|Analyse Data and Build ML Models|Pandas,NumPy,OpenCV,Matplotlib,Tensorflow",
     ],
   },
 };

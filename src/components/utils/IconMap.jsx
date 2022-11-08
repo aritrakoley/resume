@@ -5,7 +5,32 @@ import {
   FaCogs,
   FaMobileAlt,
   FaRobot,
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3,
+  FaJava,
 } from "react-icons/fa";
+
+import {
+  SiTailwindcss,
+  SiStorybook,
+  SiFirebase,
+  SiJavascript,
+  SiPostgresql,
+  SiRobotframework,
+  SiSelenium,
+  SiPython,
+  SiAndroidstudio,
+  SiIonic,
+  SiPwa,
+  SiPandas,
+  SiNumpy,
+  SiOpencv,
+  SiTensorflow,
+} from "react-icons/si";
+
+import { MdScatterPlot } from "react-icons/md";
 
 export const IconMap = {
   code: <FaLaptopCode />,
@@ -14,4 +39,25 @@ export const IconMap = {
   cogs: <FaCogs />,
   mobile: <FaMobileAlt />,
   robot: <FaRobot />,
+  reactjs: <FaReact />,
+  tailwind: <SiTailwindcss />,
+  storybook: <SiStorybook />,
+  firebase: <SiFirebase />,
+  nodejs: <FaNodeJs />,
+  html: <FaHtml5 />,
+  css: <FaCss3 />,
+  js: <SiJavascript />,
+  sql: <SiPostgresql />,
+  "robot framework": <SiRobotframework />,
+  selenium: <SiSelenium />,
+  python: <SiPython />,
+  "android studio": <SiAndroidstudio />,
+  java: <FaJava />,
+  ionic: <SiIonic />,
+  pwa: <SiPwa />,
+  pandas: <SiPandas />,
+  numpy: <SiNumpy />,
+  matplotlib: <MdScatterPlot />,
+  opencv: <SiOpencv />,
+  tensorflow: <SiTensorflow />,
 };
