@@ -52,7 +52,7 @@ const Header = ({ activeSection }) => {
   ];
   return (
     <>
-      <header className="w-full min-h-fit m-2 p-2 flex flex-col items-center justify-between rounded-2xl bg-slate-800 text-slate-200">
+      <header className="w-full min-h-fit m-2 p-2 flex flex-col items-center justify-between rounded-3xl bg-slate-800 text-slate-200">
         <div className="flex m-1 justify-center items-center w-[10rem] h-[10rem] bg-slate-700 rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 hover:">
           <img
             src="images/avatar.jpg"
