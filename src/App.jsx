@@ -51,19 +51,15 @@ function App() {
 
   return (
     <div className="w-[100%] h-[100vh] flex bg-gray-900">
-
       <section
         id="header"
         className="h-full px-2 flex flex-col justify-start items-center min-w-fit"
       >
         <Header activeSection={activeSection} />
+        <Footer />
       </section>
 
-      <section
-        id="main"
-        className="h-full grow flex flex-col overflow-auto"
-      >
-
+      <section id="main" className="h-full grow flex flex-col overflow-auto">
         {/* <section id="zero">
           <div className="h-[30%] w-[100%] overflow-hidden">
             <img src={content.bannerImgUrl} alt="" className="h-full w-full" />
@@ -85,13 +81,7 @@ function App() {
         <section id="four" ref={refFour}>
           <Projects />
         </section>
-
-        <section id="footer" className="border border-blue-600">
-          <Footer />
-        </section>
-
       </section>
-
     </div>
   );
 }
