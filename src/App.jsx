@@ -5,7 +5,6 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ThingsICanDo from "./components/ThingsICanDo";
-import { content } from "./data/content";
 
 function App() {
   const [activeSection, setActiveSection] = useState("one");
@@ -14,6 +13,7 @@ function App() {
   const refTwo = useRef(null);
   const refThree = useRef(null);
   const refFour = useRef(null);
+  const refMain = useRef(null);
 
   useEffect(() => {
     const sections = [
@@ -33,8 +33,9 @@ function App() {
 
       const getCurrentSection = () => {
         return sections.find((e) => {
-          const cursor = window.scrollY + 40;
+          const cursor = refMain.current.scrollTop + 40;
           const bounds = getVerticalBounds(e.ref.current);
+          // console.log({cursor, bounds})
           return cursor >= bounds.top && cursor <= bounds.bottom;
         });
       };
@@ -43,10 +44,11 @@ function App() {
       if (currentSection && currentSection.sid !== activeSection) {
         setActiveSection(currentSection.sid);
       }
+      // console.log({ currentSection });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    refMain.current.addEventListener("scroll", handleScroll);
+    return () => refMain.current.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
 
   return (
@@ -62,6 +64,7 @@ function App() {
       <section
         id="main"
         className="h-full grow flex flex-col items-stretch overflow-auto 2xl:pr-[15rem] 2xl:pt-5"
+        ref={refMain}
       >
         {/* <section id="zero">
           <div className="h-[30%] w-[100%] overflow-hidden">
