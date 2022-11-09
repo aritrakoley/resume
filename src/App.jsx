@@ -50,16 +50,19 @@ function App() {
   }, [activeSection]);
 
   return (
-    <div className="w-[100%] h-[100vh] flex bg-gray-900">
+    <div className="w-[100%] md:h-[100vh] md:flex bg-gray-900">
       <section
         id="header"
-        className="h-full px-2 flex flex-col justify-start items-center min-w-fit"
+        className="h-full px-2 flex flex-col justify-start items-center min-w-fit 2xl:pl-[15rem] 2xl:pt-5"
       >
         <Header activeSection={activeSection} />
         <Footer />
       </section>
 
-      <section id="main" className="h-full grow flex flex-col overflow-auto">
+      <section
+        id="main"
+        className="h-full grow flex flex-col items-stretch overflow-auto 2xl:pr-[15rem] 2xl:pt-5"
+      >
         {/* <section id="zero">
           <div className="h-[30%] w-[100%] overflow-hidden">
             <img src={content.bannerImgUrl} alt="" className="h-full w-full" />

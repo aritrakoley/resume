@@ -73,7 +73,7 @@ const Header = ({ activeSection }) => {
         >
           {designation}
         </div>
-        <div className="mt-2 grid grid-cols-1 grid-flow-row">
+        <div className="w-full p-5 md:w-fit mt-2 grid grid-cols-1 2xl:grid-cols-2 grid-flow-row">
           {contactStubs.map((e) => (
             <ContactStub key={e.title} {...e} />
           ))}
@@ -82,7 +82,7 @@ const Header = ({ activeSection }) => {
 
       <nav
         id="nav"
-        className="w-full min-h-fit mt-1 mx-2 mb-2 p-2 grow flex flex-col items-center justify-between rounded-2xl text-slate-200"
+        className="hidden w-full min-h-fit mt-1 mx-2 mb-2 p-2 grow md:flex flex-col items-center justify-between rounded-2xl text-slate-200"
       >
         <ul className="w-full mt-2 flex flex-col items-center">
           {navItems.map((e) => (
