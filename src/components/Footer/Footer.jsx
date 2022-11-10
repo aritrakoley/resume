@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <>
-      <div class="container">
-        <ul class="copyright">
+      <div className="hidden md:block text-slate-600">
+        <ul className="p-5">
           <li>&copy; Aritra Koley. All rights reserved.</li>
         </ul>
       </div>

@@ -1,23 +1,19 @@
+import { content } from "../../data/content";
+import Item from "./Item";
 const Experience = () => {
-    return (
-      <>
-        <div className="container">
-          <h3>Experience</h3>
-          <p>Relevant milestones in my professional and academic career</p>
-          <ul className="milestones">
-            <li className="icon solid fa-code"><strong>Software Engineer</strong> <em>[2019 - current day]</em><br />iMerit Technology</li>
-            <li></li>
-            <li className="icon solid fa-book"><strong>M.Sc. in Computer Science</strong> <em>[2017 - 2019]</em><br />Banaras Hindu University (B.H.U), Varanasi</li>
-            <li></li>
-            <li className="icon solid fa-book"><strong>B.Sc. in Computer Science (Hons)</strong> <em>[2014 - 2017]</em><br />St. Xavier's College (Autonomous), Kolkata</li>
-            {/* <li className="icon solid fa-cubes">Stack small boxes</li>
-            <li className="icon solid fa-coffee">Drink much coffee</li>
-            <li className="icon solid fa-bolt">Lightning bolt</li>
-            <li className="icon solid fa-users">Shadow clone technique</li> */}
-          </ul>
-        </div>
-      </>
-    );
-  };
-  export default Experience;
-  
+  const { title, subtitle, data } = content.experience;
+  return (
+    <div className="bg-slate-800 text-slate-200 m-2 p-5 md:mx-10 md:px-20 md:py-10 rounded-3xl ">
+      <h2 className="text-6xl py-5 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-600 ">
+        {title}
+      </h2>
+      <p className="text-xl text-slate-400">{subtitle}</p>
+      <ul className="mt-10 pb-5">
+        {data.map((e) => (
+          <Item key={e} data={e} />
+        ))}
+      </ul>
+    </div>
+  );
+};
+export default Experience;

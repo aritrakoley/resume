@@ -1,22 +1,102 @@
+import { content } from "../../data/content";
+import ContactStub from "./ContactStub";
+import { HiPhone } from "react-icons/hi";
+import { SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
+import NavItem from "./NavItem";
+
 const Header = ({ activeSection }) => {
+  const { name, designation, phone, email, github, linkedin } = content.contact;
+  const contactStubs = [
+    {
+      icon: <HiPhone className="mx-1" />,
+      title: "Phone",
+      data: phone,
+      url: "/",
+    },
+    {
+      icon: <SiGmail className="mx-1" />,
+      title: "Email",
+      data: email,
+      url: "mailto:koley.aritra824@gmail.com",
+    },
+    {
+      icon: <SiGithub className="mx-1" />,
+      title: "GitHub",
+      data: github,
+      url: github,
+    },
+    {
+      icon: <SiLinkedin className="mx-1" />,
+      title: "LinkedIn",
+      data: linkedin,
+      url: linkedin,
+    },
+  ];
+  const navItems = [
+    {
+      id: "one",
+      title: "Who Am I?",
+    },
+    {
+      id: "two",
+      title: "Experience",
+    },
+    {
+      id: "three",
+      title: "Things I Can Do",
+    },
+    {
+      id: "four",
+      title: "Projects",
+    },
+  ];
   return (
     <>
-      <header>
-        <span className="image avatar">
-          <img src="images/avatar.jpg" alt="" />
-        </span>
-        <h1 id="logo">
-          <a href="/">Aritra Koley</a>
-        </h1>
-        <p>Software Engineer</p>
-        <div className="contact-box">
-          <ul className="icons">
-            <li>
-              <a href="/" className="icon solid fa-phone" target="_blank" rel="noreferrer">
-                <span className="label">Phone</span><br />
-                <em>+91 8017011376</em>
-              </a>
-            </li>
+      <header className="w-full min-h-fit m-2 p-2 flex flex-col items-center justify-between rounded-3xl bg-slate-800 text-slate-200">
+        <div className="flex m-1 justify-center items-center w-[10rem] h-[10rem] bg-slate-700 rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 hover:">
+          <img
+            src="images/avatar.jpg"
+            alt=""
+            className="w-[9rem] h-[9rem] rounded-full"
+          />
+          {/* <div className="min-w-[9rem] min-h-[9rem] absolute top-[-0.5rem] left-[-0.5rem] blur-md  rounded-full bg-gradient-to-r from-gray-200 to-purple-500 z-1"></div> */}
+        </div>
+        <div
+          id="name"
+          className="mt-2 bg-slate-700 px-4 text-xl font-semibold rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 "
+        >
+          {name}
+        </div>
+        <div
+          id="designation"
+          className="mt-2 bg-slate-700 px-4 text-xl rounded-full shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400"
+        >
+          {designation}
+        </div>
+        <div className="w-full p-5 md:w-fit mt-2 grid grid-cols-1 2xl:grid-cols-2 grid-flow-row">
+          {contactStubs.map((e) => (
+            <ContactStub key={e.title} {...e} />
+          ))}
+        </div>
+      </header>
+
+      <nav
+        id="nav"
+        className="hidden w-full min-h-fit mt-1 mx-2 mb-2 p-2 grow md:flex flex-col items-center justify-between rounded-2xl text-slate-200"
+      >
+        <ul className="w-full mt-2 flex flex-col items-center">
+          {navItems.map((e) => (
+            <NavItem key={e.id} activeSection={activeSection} {...e} />
+          ))}
+        </ul>
+      </nav>
+    </>
+  );
+};
+
+export default Header;
+{
+  /* <ul className="flex flex-wrap">
             <li>
               <a
                 href="mailto:koley.aritra824@gmail.com"
@@ -24,8 +104,9 @@ const Header = ({ activeSection }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="label">Email</span><br />
-                <em>koley.aritra824@gmail.com</em>
+                <span className="label">Email</span>
+                <br />
+                <em>{email}</em>
               </a>
             </li>
           </ul>
@@ -37,8 +118,9 @@ const Header = ({ activeSection }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="label">Github</span><br />
-                <em>github.com/aritrakoley</em>
+                <span className="label">Github</span>
+                <br />
+                <em>{github}</em>
               </a>
             </li>
             <li>
@@ -48,85 +130,10 @@ const Header = ({ activeSection }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="label">LinkedIn</span><br />
-                <em>linkedin.com/in/aritra-koley</em>
+                <span className="label">LinkedIn</span>
+                <br />
+                <em>{linkedin}</em>
               </a>
             </li>
-          </ul>
-        </div>
-      </header>
-      <nav id="nav">
-        <ul>
-          <li>
-            <a
-              href="#one"
-              className={activeSection === "one" ? "active" : null}
-            >
-              Who Am I ?
-            </a>
-          </li>
-          <li>
-            <a
-              href="#two"
-              className={activeSection === "two" ? "active" : null}
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#three"
-              className={activeSection === "three" ? "active" : null}
-            >
-              Things I Can Do
-            </a>
-          </li>
-          <li>
-            <a
-              href="#four"
-              className={activeSection === "four" ? "active" : null}
-            >
-              Projects
-            </a>
-          </li>
-        </ul>
-      </nav>
-      {/* <footer>
-        <ul className="icons">
-          {/* <li>
-            <a href="#" className="icon brands fa-twitter">
-              <span className="label">Twitter</span>
-            </a>
-          </li>
-          {/* <li>
-            <a href="#" className="icon brands fa-facebook-f">
-              <span className="label">Facebook</span>
-            </a>
-          </li> 
-           <li>
-            <a href="#" className="icon solid fa-phone" target="_blank">
-              <span className="label">Phone</span><em>+91 8017011376</em>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:koley.aritra824@gmail.com" className="icon solid fa-envelope" target="_blank">
-              <span className="label">Email</span><em>koley.aritra824@gmail.com</em>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/aritrakoley" className="icon brands fa-github" target="_blank">
-              <span className="label">Github</span><em>github.com/aritrakoley</em>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/aritra-koley" className="icon brands fa-linkedin" target="_blank">
-              <span className="label">LinkedIn</span><em>linkedin.com/in/aritra-koley</em>
-            </a>
-          </li>
-        </ul>
-      </footer> */}
-    </>
-  );
-};
-
-export default Header;
+          </ul> */
+}
