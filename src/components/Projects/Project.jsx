@@ -2,29 +2,28 @@ import React from "react";
 
 const Project = ({ url, imgUrl, title, date }) => {
   return (
-    <div className="bg-slate-700 my-3 px-5 py-5 rounded-3xl">
-      <img
-        className="w-fit object-contain bg-slate-200/70 rounded-3xl h-72 lg:mx-6 lg:w-1/2 lg:h-96"
-        src={imgUrl}
-        alt=""
-      />
-      <div className="mt-8 lg:flex lg:items-center">
-        <h1 className="text-xl font-semibold text-gray-200 capitalize lg:text-4xl">
+    <a
+      href={url}
+      className="flex flex-col bg-slate-700 my-3 px-5 py-5 rounded-3xl transition ease-in-out hover:scale-105 hover:my-5"
+    >
+      <div className="w-full p-1 flex justify-center rounded-3xl bg-gradient-to-r from-slate-900 via-purple-500 to-slate-900 ">
+        <img
+          className="w-fit object-scale-down rounded-3xl h-72 lg:h-96"
+          src={imgUrl}
+          alt=""
+        />
+      </div>
+
+      <div className="mt-8">
+        <h1 className="text-xl font-semibold text-gray-200 capitalize lg:text-2xl">
           {title}
         </h1>
 
-        <div className="w-full mt-5 lg:w-1/2 lg:mt-0 lg:mx-6 ">
-          <p className="w-fit max-w-full text-gray-200 text-lg bg-slate-600 rounded-full px-4 mb-1">
-            {date}
-          </p>
-          <a href={url}>
-            <p className="w-fit break-all text-gray-200 text-lg bg-slate-600 rounded-full py-1 px-4">
-              {url}
-            </p>
-          </a>
-        </div>
+        <p className="w-fit max-w-full text-gray-200 text-lg bg-slate-600 rounded-full px-4 mb-1">
+          {date}
+        </p>
       </div>
-    </div>
+    </a>
 
     // <div className="flex bg-slate-700 mb-4 rounded-3xl overflow-hidden">
     //   <a href={url} className="w-[30rem] h-[30rem]overflow-hidden  border border-red-700 ">
